@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miner-Mods</title>
+<meta name="description" content="Hands-on mods, cooling builds, and honest gear picks for solo miners who want more than the same three tricks everyone runs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14120f;
+    --panel: #1c1913;
+    --line: #35301f;
+    --text: #ede8df;
+    --text-dim: #a89f8c;
+    --copper: #6fa52e;
+    --copper-bright: #8dc63f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .traces {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 8vh 28px 10vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo {
+    height: 84px;
+    width: auto;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    line-height: 1.02;
+    margin: 0 0 1.6rem;
+    max-width: 11ch;
+    letter-spacing: -0.01em;
+  }
+
+  h1 span {
+    color: var(--copper-bright);
+  }
+
+  .lede {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--text);
+    max-width: 46ch;
+    margin: 0 0 1.1rem;
+  }
+
+  .sub {
+    font-size: 1rem;
+    color: var(--text-dim);
+    max-width: 52ch;
+    margin: 0 0 3.2rem;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .status strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: var(--panel);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .links a:hover,
+  .links a:focus-visible {
+    border-color: var(--copper);
+    transform: translateY(-1px);
+  }
+
+  .links a:focus-visible {
+    outline: 2px solid var(--copper-bright);
+    outline-offset: 2px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 28px 5vh;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .links a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<svg class="traces" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#6fa52e" stroke-width="1" fill="none">
+    <path d="M0 120 H260 L300 160 V420 L340 460 H700"/>
+    <path d="M1000 200 H760 L720 240 V520 L680 560 H420"/>
+    <path d="M0 780 H180 L220 740 V600 L260 560 H520 L560 600 V820"/>
+    <path d="M1000 900 H820 L780 860 V700"/>
+  </g>
+  <g fill="#6fa52e">
+    <circle cx="260" cy="120" r="4"/>
+    <circle cx="340" cy="460" r="4"/>
+    <circle cx="720" cy="240" r="4"/>
+    <circle cx="420" cy="560" r="4"/>
+    <circle cx="220" cy="740" r="4"/>
+    <circle cx="560" cy="600" r="4"/>
+    <circle cx="780" cy="860" r="4"/>
+  </g>
+</svg>
+
+<div class="wrap">
+  <div class="mark">
+    <img src="logo.jpg" alt="Miner Mods" class="logo">
+  </div>
+
+  <h1>Stop running the same <span>three mods.</span></h1>
+
+  <p class="lede">Hands-on cooling builds, teardown mods, and honest gear picks for solo miners who want to push past what everyone else is doing.</p>
+  <p class="sub">Two kinds of content live here: the basics you need to mod safely, and the radical builds nobody else is posting. Every product gets a real opinion — what's worth buying, what's not, and why.</p>
+
+  <div class="status">
+    <span>Building this out right now.</span>
+    <strong>Follow along while the site comes together.</strong>
+  </div>
+
+  <nav class="links">
+    <a href="#" target="_blank" rel="noopener">YouTube</a>
+    <a href="#" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="#" target="_blank" rel="noopener">Discord</a>
+  </nav>
+</div>
+
+<footer>&copy; <span id="year"></span> Miner-Mods</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
