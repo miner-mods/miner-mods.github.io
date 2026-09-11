@@ -51,15 +51,15 @@
     justify-content: center;
   }
 
-  .mark {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 3.2rem;
+  .site-header {
+    position: fixed;
+    top: 24px;
+    left: 28px;
+    z-index: 2;
   }
 
   .logo {
-    height: 84px;
+    height: 76px;
     width: auto;
     display: block;
   }
@@ -156,6 +156,10 @@
 </head>
 <body>
 
+<header class="site-header">
+  <img src="logo.jpg" alt="Miner Mods" class="logo">
+</header>
+
 <svg class="traces" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
   <g stroke="#6fa52e" stroke-width="1" fill="none">
     <path d="M0 120 H260 L300 160 V420 L340 460 H700"/>
@@ -175,10 +179,6 @@
 </svg>
 
 <div class="wrap">
-  <div class="mark">
-    <img src="logo.jpg" alt="Miner Mods" class="logo">
-  </div>
-
   <h1>Stop running the same <span>three mods.</span></h1>
 
   <p class="lede">Hands-on cooling builds, teardown mods, and honest gear picks for solo miners who want to push past what everyone else is doing.</p>
